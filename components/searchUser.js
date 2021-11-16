@@ -64,7 +64,7 @@ const searchUser = ({navigation}) => {
                   <Text style={{ fontSize: 13, fontWeight: "700" , color:'white'}}>
                     {user.login}
                   </Text>
-                  <TouchableOpacity onPress={(()=>navigation.navigate('Repos'))}>
+                  <TouchableOpacity onPress={()=>navigation.navigate('Repos', {repoURL:user.repos_url})}>
                     <Text style={{color:'white'}}>View Repo</Text>
                   </TouchableOpacity>
                 </View>
@@ -108,12 +108,14 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 1,
     width: 270,
+    marginRight: 0,
   },
   btn: {
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 60,
     backgroundColor: "blue",
+    marginLeft: 7,
   },
   btnText: {
     fontSize: 16,

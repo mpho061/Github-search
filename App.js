@@ -15,7 +15,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="searchUser" component={searchUser} options={{headerShown:false}}/>
-        <Stack.Screen name="Repos" component={Repos}/>
+        <Stack.Screen name="Repos" component={Repos} />
       </Stack.Navigator>
 
     </NavigationContainer>
